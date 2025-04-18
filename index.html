@@ -1,9 +1,167 @@
 <!DOCTYPE html>
-<html 
+<html lang="es">
+
 <head>
-    <title>Portafolio Geynerson Leal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lealcode | Geynerson Leal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('resources/img/fondo-codigo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(0.3);
+            /* <-- Aquí oscureces */
+            z-index: -1;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="text-cyan-400">
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center justify-center text-center relative px-6 py-20 md:py-0">
+        <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl mx-auto   rounded-xl p-6">
+
+            <!-- Imagen centrada -->
+            <div class="flex justify-center">
+                <img src="resources/img/fotogey.png" alt="Geynerson Leal"
+                    class="w-[260px] sm:w-[320px] md:w-[400px] lg:w-[450px] xl:w-[500px] object-contain drop-shadow-2xl -mb-6">
+            </div>
+
+            <!-- Texto debajo de las manos -->
+            <div class="text-center mt-10 md:mt-3">
+                <h1 class="text-3xl text-white sm:text-4xl md:text-5xl font-bold drop-shadow-md mb-4">
+                    Hola, soy <span class="text-lime-400">Geynerson Leal</span>, <br>
+                    <span id="dynamic-text" class="text-white">un Programador junior con mentalidad de senior.</span>
+                </h1>                
+                <p class="text-base sm:text-lg text-gray-300 mb-9">Especialista en Backend con Java & Spring Boot</p>
+                <a href="#proyectos"
+                    class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-bold hover:bg-lime-400 transition">Explora
+                    mi código</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+<section id="sobre-mi" class="py-20 px-6 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-xl mx-4 my-8">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl mb-8 text-lime-400">Sobre mí</h2>
+        <p class="text-gray-300 text-xl leading-relaxed">
+            ¡Hola! Soy <span class="text-lime-400 font-semibold">Geynerson Leal</span>, un apasionado desarrollador backend colombiano,
+            con enfoque en <span class="text-cyan-400 font-semibold">Java y Spring Boot</span>. Me encanta crear soluciones inteligentes que
+            resuelvan problemas reales, con código limpio y escalable. Siempre estoy buscando mejorar, aprender nuevas tecnologías
+            y compartir mi camino con otros desarrolladores a través de contenido en redes sociales.
+        </p>
+        <p class="text-gray-400 mt-6 text-base">
+            Mi meta es convertirme en un desarrollador backend y analista de datos de alto nivel, y algún día construir un mundo virtual 3D con inteligencia artificial.
+        </p>
+    </div>
+</section>
+
+
+    <!-- TECNOLOGÍAS -->
+    <section class="py-20 px-6 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-xl mx-4 my-8 text-center">
+        <h2 class="text-3xl md:text-4xl mb-10 text-cyan-400">Tecnologías que uso</h2>
+        <div class="flex flex-wrap justify-center gap-10 text-6xl">
+            <i class="fab fa-java text-orange-500"><img src="resources/img/java.png" alt="Java"></i>
+            <img src="resources/img/springboot.png" alt="Spring Boot" class="h-14">
+            <i class="fas fa-database text-blue-400"><img src="resources/img/postgre.png" alt="postgre"></i>
+            <i class="fab fa-html5 text-orange-600"><img src="resources/img/html-5.png" alt="html-5"></i>
+            <i class="fab fa-css3-alt text-blue-500"><img src="resources/img/css-3.png" alt="css-3"></i>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="py-20 px-6 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-xl mx-4 my-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl text-center text-cyan-400 mb-10">Proyectos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-[#111111] rounded-xl p-6 border border-cyan-400 hover:border-lime-400 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2 text-lime-400">Sistema Gestión de inventario</h3>
+                    <span class="text-sm text-yellow-400 bg-yellow-800 px-2 py-1 rounded-full">En proceso</span>
+                    <p class="text-gray-300 mb-4">Este proyecto es una API RESTful desarrollada con Spring Boot para
+                        gestionar un sistema de inventarios inteligente. Permite realizar operaciones CRUD sobre
+                        productos, categorías y proveedores, registrar movimientos de inventario, gestionar alertas de
+                        stock bajo, generar reportes y manejar roles de usuario con autenticación JWT.</p>
+                    <a href="https://github.com/geynerson003/gestion-inventario" target="_blank"
+                        class="text-cyan-300 underline">Ver repositorio</a>
+                </div>
+                <div
+                    class="bg-[#111111] rounded-xl p-6 border border-cyan-400 hover:border-lime-400 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2 text-lime-400">Libros Alura</h3>
+                    <span class="text-sm text-yellow-400 bg-green-800 px-2 py-1 rounded-full">Terminado</span>
+                    <p class="text-gray-300 mb-4">Este proyecto es una aplicación de biblioteca que interactúa con la
+                        API Gutendex para buscar libros y los almacena en una base de datos local. Permite buscar libros
+                        por título, listar libros y autores registrados, buscar autores vivos en un año específico y
+                        buscar libros por idioma.</p>
+                    <a href="https://github.com/geynerson003/LibrosAlura" target="_blank"
+                        class="text-cyan-300 underline">Ver repositorio</a>
+                </div>
+                <div
+                    class="bg-[#111111] rounded-xl p-6 border border-cyan-400 hover:border-lime-400 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2 text-lime-400">Conversor de moneda</h3>
+                    <span class="text-sm text-yellow-400 bg-green-800 px-2 py-1 rounded-full">Terminado</span>
+                    <p class="text-gray-300 mb-4">Este es un programa simple de conversión de divisas desarrollado en
+                        Java. Permite a los usuarios obtener tasas de conversión entre diferentes monedas y realizar
+                        conversiones de una moneda a otra usando la API ExchangeRate.</p>
+                    <a href="https://github.com/geynerson003/conversor-moneda" target="_blank"
+                        class="text-cyan-300 underline">Ver repositorio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-20 px-6 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-xl mx-4 my-8 text-center">
+        <h2 class="text-3xl md:text-4xl mb-10 text-lime-400">Contáctame</h2>
+        <div class="flex justify-center gap-12 text-5xl">
+            <a href="https://www.linkedin.com/in/geynerson-leal-guzman" target="_blank">
+                <img src="resources/img/linkedin.png" alt="linkedin" class="hover:text-white cursor-pointer" />
+            </a>
+            <a href="https://wa.me/573222313855" target="_blank">
+                <img src="resources/img/whatsapp.png" alt="whatsapp" class="hover:text-white cursor-pointer" />
+            </a>
+            <a href="mailto:geynersonlealguzman@gmail.com">
+                <img src="resources/img/gmail.png" alt="gmail" class="hover:text-white cursor-pointer" />
+            </a>
+        </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="py-20 px-6 bg-[rgba(0,0,0,0.6)] backdrop-blur-sm rounded-xl mx-4 my-8 text-center">
+        <h2 class="text-3xl md:text-4xl mb-10 text-cyan-400">Sígueme en redes</h2>
+        <div class="flex justify-center gap-10 text-5xl">
+            <a href="https://www.tiktok.com/@lealcode_software?_t=ZS-8vZJsxhHO3c&_r=1"><i
+                    class="fab fa-tiktok hover:text-white cursor-pointer"><img src="resources/img/tik-tok (2).png"
+                        alt="tik-tok"></i></a>
+            <a href="https://www.facebook.com/share/1BoZYvomtc/"><i
+                    class="fab fa-facebook hover:text-white cursor-pointer"><img src="resources/img/facebook.png"
+                        alt="facebook"></i></a>
+        </div>
+    </section>
+
+    <footer class="bg-[#020202] text-center py-6 border-t border-cyan-400 text-sm">
+        > Desarrollado por Geynerson Leal | Colombia 2025
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
